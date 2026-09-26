@@ -51,6 +51,7 @@ dependencies {
     implementation("io.ktor:ktor-client-android:3.5.0")
     implementation("io.ktor:ktor-client-content-negotiation:3.5.0")
     implementation("io.ktor:ktor-serialization-kotlinx-json:3.5.0")
+    implementation(libs.material)
 
     // For Serialization
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.11.0")
