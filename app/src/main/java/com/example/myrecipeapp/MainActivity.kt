@@ -5,7 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import com.example.myrecipeapp.ui.theme.MyRecipeAppTheme
-import com.presentation.screens.home.HomeScreen
+import com.presentation.navigation.RecipeNavHost
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,11 +13,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             MyRecipeAppTheme {
-                HomeScreen(
-                    onRecipeClick = { recipeId ->
-                        // Handle recipe item click
-                    }
-                )
+                RecipeNavHost()
             }
         }
     }

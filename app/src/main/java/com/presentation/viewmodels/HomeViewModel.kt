@@ -32,7 +32,6 @@ class HomeViewModel : ViewModel() {
     var selectedCategory by mutableStateOf(value = "All")
         private set
 
-
     private var allRecipes: List<RecipeDTO> = emptyList()
 
     init {

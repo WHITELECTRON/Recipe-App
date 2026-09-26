@@ -1,6 +1,7 @@
 package com.data.remote
 
 import com.data.remote.dto.AddRecipeRequest
+import com.data.remote.dto.AddRecipeResponse
 import com.data.remote.dto.RecipeDTO
 import com.data.remote.dto.RecipeResponse
 import io.ktor.client.HttpClient
@@ -21,11 +22,11 @@ class RecipeAPIService(private val client: HttpClient) {
         return client.get(urlString = "${KtorClient.BASE_URL}recipes/$id").body()
     }
 
-    suspend fun addRecipe(request: AddRecipeRequest) {
-        client.post(urlString = "${KtorClient.BASE_URL}recipes/add") {
+    suspend fun addRecipe(request: AddRecipeRequest): AddRecipeResponse {
+        return client.post(urlString = "${KtorClient.BASE_URL}recipes/add") {
             contentType(ContentType.Application.Json)
             setBody(request)
-        }
+        }.body()
     }
 
 }

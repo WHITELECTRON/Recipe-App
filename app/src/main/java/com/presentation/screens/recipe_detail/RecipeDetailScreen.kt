@@ -57,8 +57,8 @@ fun RecipeDetailScreen(
                     )
                 }
 
-                else -> {
-                    // Full recipe details UI (ingredients, instructions, nutrition) will be completed in Part 08
+                viewModel.recipe != null -> {
+                    RecipeDetailContent(details = viewModel.recipe!!)
                 }
             }
         }

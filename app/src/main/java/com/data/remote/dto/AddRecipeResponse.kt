@@ -4,8 +4,8 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class RecipeDTO(
-    @SerialName("id") val id: Int,
+data class AddRecipeResponse(
+    @SerialName("id") val id: Int? = null,
     @SerialName("name") val name: String,
     @SerialName("ingredients") val ingredients: List<String>,
     @SerialName("instructions") val instructions: List<String>,
@@ -16,9 +16,5 @@ data class RecipeDTO(
     @SerialName("cuisine") val cuisine: String,
     @SerialName("caloriesPerServing") val caloriesPerServing: Int,
     @SerialName("tags") val tags: List<String>,
-    @SerialName("userId") val userId: Int,
-    @SerialName("image") val image: String,
-    @SerialName("rating") val rating: Double,
-    @SerialName("reviewCount") val reviewCount: Int,
     @SerialName("mealType") val mealType: List<String>
 )

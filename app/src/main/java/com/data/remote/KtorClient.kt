@@ -7,7 +7,6 @@ import io.ktor.serialization.kotlinx.json.json
 import kotlinx.serialization.json.Json
 
 object KtorClient {
-
     val client = HttpClient(Android) {
         install(ContentNegotiation) {
             json(
